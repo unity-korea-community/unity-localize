@@ -14,5 +14,6 @@ namespace UNKO.Localize
         ILocalizeManager ChangeLanguage(SystemLanguage language);
 
         string GetLocalizeText(string languageID, params string[] param);
+        bool TryGetLocalizeText(string languageID, out string result, params string[] param);
     }
 }

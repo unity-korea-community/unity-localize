@@ -7,8 +7,8 @@ public class LocalizeManagerTests
 {
     public class TestData : ILocalizeData
     {
-        public string LocalizeID { get; private set; }
 
+        public string LocalizeID;
         public string ko;
         public string en;
 
@@ -18,6 +18,8 @@ public class LocalizeManagerTests
             this.ko = ko;
             this.en = en;
         }
+
+        public string GetLocalizeID() => LocalizeID;
 
         public string GetLocalizeText(SystemLanguage systemLanguage)
         {

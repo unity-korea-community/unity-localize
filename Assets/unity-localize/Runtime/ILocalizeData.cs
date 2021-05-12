@@ -7,8 +7,7 @@ namespace UNKO.Localize
     /// </summary>
     public interface ILocalizeData
     {
-        string LocalizeID { get; }
-
+        string GetLocalizeID();
         string GetLocalizeText(SystemLanguage systemLanguage);
     }
 
@@ -17,7 +16,7 @@ namespace UNKO.Localize
     /// </summary>
     public interface ILocalizeFontData
     {
-        SystemLanguage language { get; }
+        SystemLanguage GetLanguage();
 
         Font GetFont();
     }
