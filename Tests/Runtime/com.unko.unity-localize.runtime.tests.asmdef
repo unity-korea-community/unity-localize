@@ -1,0 +1,19 @@
+{
+    "name": "com.unko.unity-localize.runtime.tests",
+    "references": [
+        "GUID:1ef8134b214e60349aaa84e6dbde73ef"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
