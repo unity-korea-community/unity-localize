@@ -2,5 +2,4 @@
 
 * [unity-localize](README.md)
 * [LICENSE](license.md)
-* [Sample](sample.md)
 
