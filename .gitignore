@@ -5,3 +5,4 @@ Temp
 *.sln
 obj
 Packages/packages-lock.json
+Logs
