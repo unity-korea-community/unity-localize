@@ -28,3 +28,17 @@ Add package from git URL 클릭 후‌
 
 ​[`https://github.com/unity-korea-community/unity-localize.git`](https://github.com/unity-korea-community/unity-builder.git)
 
+## Sample
+
+Sample/에 Sample 폴더가 있습니다.
+
+간단한 로컬라이징 씬과 UI, Sample Script, Sample CSV Data로 이루어져 있습니다.
+
+{% embed url="https://github.com/unity-korea-community/unity-localize/tree/master/Sample" %}
+
+
+
+
+
+
+
