@@ -1,6 +1,6 @@
 {
-  "name": "com.unko.unity-localize",
-  "version": "1.0.0",
+  "name": "unko.unity-localize",
+  "version": "1.0.1",
   "displayName": "Unity Localize",
   "description": "언어 설정/변경 기능 코드 패키지입니다.",
   "unity": "2019.1",
