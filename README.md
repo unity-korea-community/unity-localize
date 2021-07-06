@@ -26,7 +26,7 @@ Add package from git URL 클릭 후‌
 
 이 저장소의 URL 입력‌
 
-​[`https://github.com/unity-korea-community/unity-localize.git`](https://github.com/unity-korea-community/unity-builder.git)
+​[`https://github.com/unity-korea-community/unity-localize.git`](https://github.com/unity-korea-community/unity-localize.git)
 
 ## Sample
 
