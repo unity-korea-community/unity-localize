@@ -1,0 +1,25 @@
+{
+  "name": "com.unko.unity-localize",
+  "version": "1.0.2",
+  "displayName": "UNKO Localize",
+  "description": "언어 설정/변경 기능 코드 패키지입니다.",
+  "unity": "2019.1",
+  "author": {
+    "name": "UNKO",
+    "url": "https://github.com/unity-korea-community"
+  },
+  "bugs": {
+    "url": "https://github.com/unity-korea-community/unity-localize/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unity-korea-community/unity-localize.git"
+  },
+  "samples": [
+    {
+      "displayName": "Sample",
+      "description": "간단한 로컬라이징 씬과 UI, Sample Script, Sample CSV Data로 이루어져 있습니다.",
+      "path": "Sample"
+    }
+  ]
+}

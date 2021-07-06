@@ -1,0 +1,15 @@
+{
+    "name": "unko.unity-localize.sample",
+    "references": [
+        "GUID:1ef8134b214e60349aaa84e6dbde73ef"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
