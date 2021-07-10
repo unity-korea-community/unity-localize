@@ -35,17 +35,9 @@ namespace UNKO.Localize
         {
             _currentLanguage = language;
             OnChangeLanguage?.Invoke(language);
-            if (_fontDictionary.TryGetValue(language, out ILocalizeFontData fontData))
-            {
-                Font font = fontData.GetFont();
-                if (font == null)
-                {
-                    Debug.LogError($"LocalizeManager.{nameof(ChangeLanguage)}(language({language}) font == null");
-                    return this;
-                }
 
-                OnChangeFont?.Invoke(font);
-            }
+            TryGetFont(out Font font);
+            OnChangeFont?.Invoke(font);
 
             return this;
         }
@@ -86,6 +78,23 @@ namespace UNKO.Localize
                 result = string.Format(result, param);
 
             return true;
+        }
+
+        public bool TryGetFont(out Font font)
+        {
+            font = null;
+            if (_fontDictionary.TryGetValue(_currentLanguage, out ILocalizeFontData fontData))
+            {
+                font = fontData.GetFont();
+                if (font == null)
+                {
+                    Debug.LogError($"LocalizeManager.{nameof(ChangeLanguage)}(language({_currentLanguage}) font == null");
+                    return false;
+                }
+
+            }
+
+            return font != null;
         }
     }
 }
