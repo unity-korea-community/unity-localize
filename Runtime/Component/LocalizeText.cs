@@ -26,6 +26,11 @@ namespace UNKO.Localize
 
             s_manager.OnChangeFont -= OnChangeFont;
             s_manager.OnChangeFont += OnChangeFont;
+
+            if (s_manager.TryGetFont(out Font font))
+            {
+                OnChangeFont(font);
+            }
         }
 
         protected override void OnChangeLanguage(SystemLanguage language)

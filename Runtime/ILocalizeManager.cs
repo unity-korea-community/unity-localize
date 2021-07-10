@@ -9,11 +9,12 @@ namespace UNKO.Localize
         event System.Action<Font> OnChangeFont;
         SystemLanguage currentLanguage { get; }
 
-        ILocalizeManager AddData(IEnumerable<ILocalizeData> datas);
-        ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> datas);
+        ILocalizeManager AddData(IEnumerable<ILocalizeData> data);
+        ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> data);
         ILocalizeManager ChangeLanguage(SystemLanguage language);
 
         string GetLocalizeText(string languageID, params string[] param);
         bool TryGetLocalizeText(string languageID, out string result, params string[] param);
+        bool TryGetFont(out Font font);
     }
 }

@@ -21,11 +21,12 @@ namespace UNKO.Localize
 
         LocalizeManager _manager = new LocalizeManager();
 
-        public ILocalizeManager AddData(IEnumerable<ILocalizeData> datas) => _manager.AddData(datas);
-        public ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> datas) => _manager.AddFontData(datas);
+        public ILocalizeManager AddData(IEnumerable<ILocalizeData> data) => _manager.AddData(data);
+        public ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> data) => _manager.AddFontData(data);
         public ILocalizeManager ChangeLanguage(SystemLanguage language) => _manager.ChangeLanguage(language);
 
         public string GetLocalizeText(string languageID, params string[] param) => _manager.GetLocalizeText(languageID, param);
         public bool TryGetLocalizeText(string languageID, out string result, params string[] param) => _manager.TryGetLocalizeText(languageID, out result, param);
+        public bool TryGetFont(out Font font) => _manager.TryGetFont(out font);
     }
 }
