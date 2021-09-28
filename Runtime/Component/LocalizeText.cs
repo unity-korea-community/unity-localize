@@ -11,10 +11,10 @@ namespace UNKO.Localize
     public class LocalizeText : LocalizeComponentBase
     {
         [SerializeField]
-        private Text _text; public Text textComponent => _text;
-        public string text { get => _text.text; set => _text.text = value; }
+        private Text _text; public Text TextComponent => _text;
+        public string Text { get => _text.text; set => _text.text = value; }
 
-        void Awake()
+        public void Awake()
         {
             if (_text == null)
                 _text = GetComponent<Text>();
@@ -40,17 +40,17 @@ namespace UNKO.Localize
 
             if (_languageParam.Length > 0)
             {
-                textComponent.text = s_manager.GetLocalizeText(_languageKey, _languageParam);
+                TextComponent.text = s_manager.GetLocalizeText(_languageKey, _languageParam);
             }
             else
             {
-                textComponent.text = s_manager.GetLocalizeText(_languageKey);
+                TextComponent.text = s_manager.GetLocalizeText(_languageKey);
             }
         }
 
         void OnChangeFont(Font font)
         {
-            textComponent.font = font;
+            TextComponent.font = font;
         }
     }
 

@@ -6,7 +6,7 @@ namespace UNKO.Localize
 {
     public class LocalizeManagerComponent : MonoBehaviour, ILocalizeManager
     {
-        public SystemLanguage currentLanguage => _manager.currentLanguage;
+        public SystemLanguage CurrentLanguage => _manager.CurrentLanguage;
 
         public event Action<SystemLanguage> OnChangeLanguage
         {

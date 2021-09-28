@@ -7,7 +7,7 @@ namespace UNKO.Localize
     {
         event System.Action<SystemLanguage> OnChangeLanguage;
         event System.Action<Font> OnChangeFont;
-        SystemLanguage currentLanguage { get; }
+        SystemLanguage CurrentLanguage { get; }
 
         ILocalizeManager AddData(IEnumerable<ILocalizeData> data);
         ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> data);
