@@ -5,7 +5,9 @@ namespace UNKO.Localize
 {
     public class LocalizeManagerComponentSingleton : LocalizeManagerComponent
     {
+#pragma warning disable IDE1006
         public static LocalizeManagerComponentSingleton instance
+#pragma warning restore IDE1006
         {
             get
             {

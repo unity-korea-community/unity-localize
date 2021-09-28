@@ -10,7 +10,7 @@ namespace UNKO.Localize
         public event System.Action<Font> OnChangeFont;
 
         [SerializeField]
-        private SystemLanguage _currentLanguage; public SystemLanguage currentLanguage => _currentLanguage;
+        private SystemLanguage _currentLanguage; public SystemLanguage CurrentLanguage => _currentLanguage;
 
         private Dictionary<string, ILocalizeData> _languageDictionary = new Dictionary<string, ILocalizeData>();
         private Dictionary<SystemLanguage, ILocalizeFontData> _fontDictionary = new Dictionary<SystemLanguage, ILocalizeFontData>();
@@ -73,7 +73,7 @@ namespace UNKO.Localize
                 return false;
             }
 
-            result = data.GetLocalizeText(currentLanguage);
+            result = data.GetLocalizeText(CurrentLanguage);
             if (param.Length > 0)
                 result = string.Format(result, param);
 
