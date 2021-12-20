@@ -48,16 +48,19 @@ namespace UNKO.Localize
             }
         }
 
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+
+            if (s_manager != null)
+            {
+                s_manager.OnChangeFont -= OnChangeFont;
+            }
+        }
+
         void OnChangeFont(Font font)
         {
             TextComponent.font = font;
         }
     }
-
-#if UNITY_EDITOR
-    // [CustomEditor(typeof(LocalizeText))]
-    // public abstract class LocalizeText_Inspector : LocalizeComponentBase_Inspector<LocalizeText>
-    // {
-    // }
-#endif
 }

@@ -35,7 +35,11 @@ namespace UNKO.Localize
 
             _languageKey = key;
             _languageParam = Array.Empty<string>();
-            OnChangeLanguage(s_manager.CurrentLanguage);
+
+            if (s_manager != null)
+            {
+                OnChangeLanguage(s_manager.CurrentLanguage);
+            }
         }
 
         public void SetLanguageKeyWithParam(string key, params string[] param)
@@ -48,7 +52,11 @@ namespace UNKO.Localize
 
             _languageKey = key;
             _languageParam = param;
-            OnChangeLanguage(s_manager.CurrentLanguage);
+
+            if (s_manager != null)
+            {
+                OnChangeLanguage(s_manager.CurrentLanguage);
+            }
         }
 
         public void UpdateLocalize()
@@ -84,7 +92,7 @@ namespace UNKO.Localize
             OnSetup();
         }
 
-        void OnDisable()
+        protected virtual void OnDisable()
         {
             if (s_isAppQuitting)
                 return;

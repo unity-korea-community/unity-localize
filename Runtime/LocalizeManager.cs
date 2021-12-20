@@ -26,7 +26,15 @@ namespace UNKO.Localize
         public ILocalizeManager AddFontData(IEnumerable<ILocalizeFontData> datas)
         {
             foreach (ILocalizeFontData data in datas)
-                _fontDictionary.Add(data.GetLanguage(), data);
+            {
+                SystemLanguage language = data.GetLanguage();
+                if (_fontDictionary.TryGetValue(language, out var alreadyExistData))
+                {
+                    Debug.LogError($"{nameof(LocalizeManager)} {nameof(AddFontData)} already contain font, language:{language}, font:{alreadyExistData.GetFont().name}, other font:{data.GetFont().name}");
+                    continue;
+                }
+                _fontDictionary.Add(language, data);
+            }
 
             return this;
         }
@@ -36,8 +44,10 @@ namespace UNKO.Localize
             _currentLanguage = language;
             OnChangeLanguage?.Invoke(language);
 
-            TryGetFont(out Font font);
-            OnChangeFont?.Invoke(font);
+            if (TryGetFont(out Font font))
+            {
+                OnChangeFont?.Invoke(font);
+            }
 
             return this;
         }
